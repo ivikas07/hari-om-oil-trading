@@ -18,6 +18,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import FAQ from "@/components/FAQ";
+import { CONTACT_INFO, EMAILJS_CONFIG, getWhatsappURL, getMailtoURL } from "@/config/contact";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,10 +47,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_3wl1eds",
-        "template_af6fyom",
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.contactTemplate,
         formRef.current,
-        "0gxTvRssjow8aTxm5"
+        EMAILJS_CONFIG.publicKey
       )
       .then(() => {
         toast.success("Message sent successfully!");
@@ -61,7 +62,8 @@ const Contact = () => {
           message: "",
         });
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("Contact form submission error:", error);
         toast.error("Failed to send message!");
       })
       .finally(() => setIsSending(false));
@@ -79,16 +81,16 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Numbers",
-      content: "Support: +91 90166 37062",
+      content: `Support: ${CONTACT_INFO.phone}`,
       action: "Call Now",
-      url: "tel:+916353151145",
+      url: `tel:${CONTACT_INFO.phone.replace(/\s/g, '')}`,
     },
     {
       icon: Mail,
       title: "Email Addresses",
-      content: "Sales:hariomoiltrading@gmail.com",
+      content: `Sales: ${CONTACT_INFO.email}`,
       action: "Send Email",
-      url: "mailto:hariomoiltrading@gmail.com",
+      url: `mailto:${CONTACT_INFO.email}`,
     },
     {
       icon: Clock,
@@ -119,7 +121,7 @@ const Contact = () => {
               name: "Hari Om Oil Tradings",
               image: "http://www.hariomoiltrading.com/logo.png",
               telephone: "+91 90166 37062",
-              email: "hariomoiltrading@gmail.com",
+              email: CONTACT_INFO.email,
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Shop No- 60 First Floor, Bandhan Arcade, Meghraj Road",

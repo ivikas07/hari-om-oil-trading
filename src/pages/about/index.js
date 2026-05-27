@@ -139,8 +139,8 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-           <h1> Trusted Traders & Suppliers of Lubricants, Polymers & Dyes in
-            Modasa, Gujarat</h1>
+            Trusted Traders & Suppliers of Lubricants, Polymers & Dyes in
+            Modasa, Gujarat
           </motion.p>
         </div>
       </div>

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ContactCard = ({ icon, title, children }) => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1">
@@ -10,6 +12,12 @@ const ContactCard = ({ icon, title, children }) => {
       </div>
     </div>
   );
+};
+
+ContactCard.propTypes = {
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default ContactCard;

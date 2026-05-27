@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { HOME_PRODUCTS } from "@/data/products";
 import { ENGINE_OILS } from "@/data/engineOil";
 import emailjs from "@emailjs/browser";
+import { CONTACT_INFO, EMAILJS_CONFIG, getWhatsappURL, getMailtoURL } from "@/config/contact";
 
 const Inquiry = () => {
   const allProducts = [...HOME_PRODUCTS, ...ENGINE_OILS].map(
@@ -44,10 +45,10 @@ const Inquiry = () => {
 
     emailjs
       .sendForm(
-        "service_3wl1eds",
-        "template_e4m4v1o",
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.inquiryTemplate,
         formRef.current,
-        "0gxTvRssjow8aTxm5"
+        EMAILJS_CONFIG.publicKey
       )
       .then(() => {
         toast.success("Thank you! We will contact you shortly.");
@@ -60,32 +61,16 @@ const Inquiry = () => {
           message: "",
         });
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("Inquiry submission error:", error);
         toast.error("Failed to send inquiry. Please try again later.");
       })
       .finally(() => setIsSubmitting(false));
   };
 
-  const whatsappURL = `https://wa.me/9016637062?text=${encodeURIComponent(
-    `Hello Hari Om Oil Trading,
+  const whatsappURL = getWhatsappURL();
 
-I would like to inquire about your products and services.
-
-Please get back to me at your earliest convenience.
-
-Thank you!`
-  )}`;
-
-  const mailToURL = `mailto:hariomoiltrading@gmail.com?subject=${encodeURIComponent(
-    "Product Inquiry – Hari Om Oil Trading"
-  )}&body=${encodeURIComponent(
-    `Hello Hari Om Oil Trading,
-
-I am interested in learning more about your products and services.  
-Please provide details regarding product availability, pricing, and delivery options.
-
-Thank you,`
-  )}`;
+  const mailToURL = getMailtoURL();
 
   const contactOptions = [
     {
@@ -93,14 +78,14 @@ Thank you,`
       title: "Email Us",
       text: "Send us an email and we’ll respond within 24 hours",
       href: mailToURL,
-      linkText: "hariomoiltrading@gmail.com",
+      linkText: CONTACT_INFO.email,
     },
     {
       icon: Phone,
       title: "Call Us",
       text: "Speak directly with our sales team",
-      href: "tel:+91 90166 37062",
-      linkText: "+91 90166 37062",
+      href: `tel:${CONTACT_INFO.phone}`,
+      linkText: CONTACT_INFO.phone,
     },
     {
       icon: MessageCircle,
@@ -158,7 +143,7 @@ Thank you,`
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Request a <h1 className="text-[#ff914d]">Custom Quote</h1>
+            Request a <span className="text-[#ff914d]">Custom Quote</span>
           </motion.h1>
           <motion.p
             className="text-xl max-w-3xl mx-auto text-blue-100"
@@ -166,11 +151,8 @@ Thank you,`
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h2>
-              {" "}
-              Get in touch with us for customized solutions and competitive
-              pricing
-            </h2>
+            Get in touch with us for customized solutions and competitive
+            pricing
           </motion.p>
         </div>
       </div>

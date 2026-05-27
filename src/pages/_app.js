@@ -1,13 +1,15 @@
 import "@/styles/globals.css";
 import Head from "next/head";
+import ErrorBoundary from "@/components/ErrorBoundary";
+import { CONTACT_INFO } from "@/config/contact";
 
 export default function App({ Component, pageProps }) {
   const schemaOrg = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Hari Om Oil Trading",
-    url: "https://www.hariomoiltrading.com",
-    logo: "https://www.hariomoiltrading.com/logo.png",
+    name: CONTACT_INFO.siteName,
+    url: CONTACT_INFO.siteUrl,
+    logo: `${CONTACT_INFO.siteUrl}/logo.png`,
     sameAs: [
       "https://www.facebook.com/hariomoiltrading",
       "https://www.instagram.com/hariomoiltrading",
@@ -18,9 +20,9 @@ export default function App({ Component, pageProps }) {
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+91 90166 37062",
+        telephone: CONTACT_INFO.phone,
         contactType: "Customer Support",
-        email: "hariomoiltrading@gmail.com",
+        email: CONTACT_INFO.email,
         areaServed: "IN",
         availableLanguage: ["English", "Hindi"],
       },
@@ -65,7 +67,9 @@ export default function App({ Component, pageProps }) {
           key="schema-org"
         />
       </Head>
-      <Component {...pageProps} />
+      <ErrorBoundary>
+        <Component {...pageProps} />
+      </ErrorBoundary>
     </>
   );
 }

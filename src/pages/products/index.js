@@ -368,7 +368,6 @@ const Products = () => {
               >
                 {/* Image Section */}
                 <div className="relative h-52 bg-gray-100 flex items-center justify-center">
-                  {console.log(product.image || product?.images[0])}
                   {product?.image || product.images?.[0] ? (
                     <Image
                       src={product.image || product.images?.[0]}

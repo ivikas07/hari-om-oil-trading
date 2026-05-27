@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 const GalleryItem = ({ imageSrc, title, description }) => {
   return (
@@ -18,6 +19,12 @@ const GalleryItem = ({ imageSrc, title, description }) => {
       </div>
     </div>
   );
+};
+
+GalleryItem.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default GalleryItem;

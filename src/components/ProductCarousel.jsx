@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { HOME_PRODUCTS } from "../data/products";
 
 const ProductCarousel = () => {
@@ -17,11 +18,13 @@ const ProductCarousel = () => {
     <div className="w-full bg-[var(--color-white)] py-14 px-4 md:px-8 border-t border-[var(--color-secondary)]">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Product Image */}
-        <div className="h-[450px] md:h-[500px] bg-[var(--color-secondary)] rounded-3xl shadow-md flex items-center justify-center p-4">
-          <img
+        <div className="h-[450px] md:h-[500px] bg-[var(--color-secondary)] rounded-3xl shadow-md flex items-center justify-center p-4 relative">
+          <Image
             src={product.images[0]}
             alt={product.name}
-            className="max-w-full max-h-full object-contain"
+            fill
+            style={{ objectFit: 'contain' }}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 

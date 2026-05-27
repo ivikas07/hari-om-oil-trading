@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center  h-16">
           <Link href="/" className="flex items-center gap-2">
-            <Image src={logo} alt="Logo" height={30} width={110} />
+            <Image src={logo} alt="Logo" height={30} width={110} priority style={{ height: 'auto' }} />
           </Link>
 
           <div className="hidden md:flex items-center space-x-10">

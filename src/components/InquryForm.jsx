@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import { Send, CheckCircle, X } from "lucide-react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import PropTypes from "prop-types";
+import { EMAILJS_CONFIG } from "@/config/contact";
 
 const InquryForm = ({ onClose, productName, category }) => {
   const formRef = useRef();
@@ -31,10 +33,10 @@ const InquryForm = ({ onClose, productName, category }) => {
 
     emailjs
       .sendForm(
-        "service_3wl1eds",
-        "template_e4m4v1o",
+        EMAILJS_CONFIG.serviceId,
+        EMAILJS_CONFIG.inquiryTemplate,
         formRef.current,
-        "0gxTvRssjow8aTxm5"
+        EMAILJS_CONFIG.publicKey
       )
       .then(() => {
         toast.success("Thank you! We will contact you shortly.");
@@ -48,7 +50,8 @@ const InquryForm = ({ onClose, productName, category }) => {
           message: "",
         });
       })
-      .catch(() => {
+      .catch((error) => {
+        console.error("Inquiry form submission error:", error);
         toast.error("Failed to send inquiry. Please try again later.");
       })
       .finally(() => setIsSubmitting(false));
@@ -266,6 +269,18 @@ const InquryForm = ({ onClose, productName, category }) => {
       )}
     </div>
   );
+};
+
+InquryForm.propTypes = {
+  onClose: PropTypes.func,
+  productName: PropTypes.string,
+  category: PropTypes.string,
+};
+
+InquryForm.defaultProps = {
+  onClose: null,
+  productName: "",
+  category: "",
 };
 
 export default InquryForm;
