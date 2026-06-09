@@ -118,7 +118,7 @@ const Footer = () => {
               className="text-accent font-semibold"
             >
               {" "}
-              FlownWare
+              DigitalTeam
             </Link>
           </p>
         </div>
