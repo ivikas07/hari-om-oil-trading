@@ -86,7 +86,7 @@ const About = () => {
           content="lubricant traders, grease suppliers, OCP polymer granules, viscosity index improvers, dye suppliers Gujarat, Modasa oil traders"
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hariomoiltrading.com/about" />
+        <link rel="canonical" href="https://www.hariomoiltrading.in/about" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -94,8 +94,8 @@ const About = () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Hari Om Oil Tradings",
-              url: "http://www.hariomoiltrading.com/",
-              logo: "http://www.hariomoiltrading.com/logo.png",
+              url: "https://www.hariomoiltrading.in/",
+              logo: "https://www.hariomoiltrading.in/logo.png",
               description:
                 "Hari Om Oil Trading is a reliable trader and supplier of automotive lubricants, industrial lubricants, greases, viscosity index improvers, OCP polymers (granules), and specialty dyes in Modasa, Gujarat.",
               foundingDate: "2009",

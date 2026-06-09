@@ -14,47 +14,47 @@ const Sitemap = () => {
     name: "Sitemap - Hari Om Oil Trading",
     description:
       "Quick links to the main sections of Hari Om Oil Trading website.",
-    url: "http://www.hariomoiltrading.com//sitemap",
+    url: "https://www.hariomoiltrading.in/sitemap",
     about: [
       {
         "@type": "WebPage",
         name: "Home",
-        url: "http://www.hariomoiltrading.com//",
+        url: "https://www.hariomoiltrading.in/",
       },
       {
         "@type": "WebPage",
         name: "About Us",
-        url: "http://www.hariomoiltrading.com//about",
+        url: "https://www.hariomoiltrading.in/about",
       },
       {
         "@type": "WebPage",
         name: "Products",
-        url: "http://www.hariomoiltrading.com//products",
+        url: "https://www.hariomoiltrading.in/products",
       },
       {
         "@type": "WebPage",
         name: "Inquiry",
-        url: "http://www.hariomoiltrading.com//inquiry",
+        url: "https://www.hariomoiltrading.in/inquiry",
       },
       {
         "@type": "WebPage",
         name: "Contact",
-        url: "http://www.hariomoiltrading.com//contact",
+        url: "https://www.hariomoiltrading.in/contact",
       },
       {
         "@type": "WebPage",
         name: "Privacy Policy",
-        url: "http://www.hariomoiltrading.com//privacy-policy",
+        url: "https://www.hariomoiltrading.in/privacy-policy",
       },
       {
         "@type": "WebPage",
         name: "Terms & Conditions",
-        url: "http://www.hariomoiltrading.com//terms-and-conditions",
+        url: "https://www.hariomoiltrading.in/terms-and-conditions",
       },
       {
         "@type": "WebPage",
         name: "Sitemap",
-        url: "http://www.hariomoiltrading.com//sitemap",
+        url: "https://www.hariomoiltrading.in/sitemap",
       },
     ],
   };

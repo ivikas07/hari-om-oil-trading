@@ -117,6 +117,42 @@ export const HOME_PRODUCTS = [
     endpoint: "innov-oil-p8161",
   },
 
+  {
+    name: "Viscosity Index Improver (White)",
+    code: "VII-WHITE",
+    category: "Viscosity Index Improver",
+    description:
+      "High-quality white (clear) viscosity index improver designed to enhance the viscosity index of lubricating oils while ensuring thermal stability and shear resistance.",
+    price: "₹36,000–₹37,000/drum",
+    unit: "Drum",
+    packagingType: "Drum",
+    brand: "Hari Om Oil Tradings",
+    modelGrade: "White",
+    usageApplication: "Viscosity index improvement for lubricating oils",
+    appearance: "White (Clear)",
+    form: "Transparent Gel",
+    specs: "Polymeric viscosity index improver, transparent gel form",
+    images: ["/products/viscosity-index-improver-white.webp"],
+    endpoint: "viscosity-index-improver-white",
+  },
+  {
+    name: "Viscosity Index Improver (Yellow)",
+    code: "VII-YELLOW",
+    category: "Viscosity Index Improver",
+    description:
+      "Premium yellow (amber) viscosity index improver formulated to improve the viscosity index of lubricants, offering superior performance under high temperature and mechanical stress.",
+    price: "₹34,000–₹35,000/drum",
+    unit: "Drum",
+    packagingType: "Drum",
+    brand: "Hari Om Oil Tradings",
+    modelGrade: "Yellow",
+    usageApplication: "Viscosity index improvement for lubricants",
+    appearance: "Yellow (Amber)",
+    form: "Amber Gel",
+    specs: "Polymeric viscosity index improver, amber gel form",
+    images: ["/products/viscosity-index-improver-yellow.webp"],
+    endpoint: "viscosity-index-improver-yellow",
+  },
 
 
 

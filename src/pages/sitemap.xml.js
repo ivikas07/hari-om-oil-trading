@@ -1,7 +1,9 @@
 // pages/sitemap.xml.js
 
 export const getServerSideProps = async ({ res }) => {
-  const baseUrl = 'https://www.hariomoiltrading.com';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hariomoiltrading.in';
+  const lastModified = '2026-06-09';
 
   // Static page links
   const staticLinks = [
@@ -31,6 +33,7 @@ ${allUrls
     return `
   <url>
     <loc>${baseUrl}${url}</loc>
+    <lastmod>${lastModified}</lastmod>
   </url>`;
   })
   .join('')}

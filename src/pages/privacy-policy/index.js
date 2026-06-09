@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     "@type": "WebPage",
     "name": "Privacy Policy - Hari Om Oil Trading",
     "description": "Privacy policy for industrial lubricants and polymer trading company. Learn how we handle your data.",
-    "url": "http://www.hariomoiltrading.com/privacy-policy"
+    "url": "https://www.hariomoiltrading.in/privacy-policy"
   };
 
   return (

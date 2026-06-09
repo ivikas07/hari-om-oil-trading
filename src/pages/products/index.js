@@ -66,28 +66,18 @@ const Products = () => {
     return matchesFilter && matchesSearch;
   });
 
-  // Structured data for SEO
-  const structuredProductData = AllProducts.map((product) => ({
+  const productListSchema = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    image: product.image || product.images?.[0],
-    description: product.description,
-    sku: product.id,
-    brand: {
-      "@type": "Brand",
-      name: product.brand || "Hari Om Oil Tradings",
-    },
-    category: product.category,
-    offers: {
-      "@type": "Offer",
-      url: `http://www.hariomoiltrading.com/product/${product.id}`,
-      priceCurrency: "INR",
-      price: product.price?.replace(/[^\d.]/g, "") || "0.00",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-    },
-  }));
+    "@type": "ItemList",
+    name: "Hari Om Oil Trading Product Catalogue",
+    numberOfItems: AllProducts.length,
+    itemListElement: AllProducts.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      url: `https://www.hariomoiltrading.in/product/${product.id}`,
+    })),
+  };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -97,13 +87,13 @@ const Products = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "http://www.hariomoiltrading.com/",
+        item: "https://www.hariomoiltrading.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Products",
-        item: "http://www.hariomoiltrading.com/products",
+        item: "https://www.hariomoiltrading.in/products",
       },
     ],
   };
@@ -111,34 +101,36 @@ const Products = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>Our Premium Products | Hari Om Oil Tradings</title>
+        <title>
+          Engine Oils, Greases & Viscosity Improvers | Hari Om Oil Trading
+        </title>
         <meta
           name="description"
-          content="Discover high-quality engine oils, greases, and polymer additives from Hari Om Oil Tradings. We are trusted industrial traders in India."
+          content="Browse engine oils, industrial greases, lubricant polymers, and viscosity index improvers from Hari Om Oil Trading in Modasa, Gujarat, with pan-India supply."
         />
         <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
-          href="https://www.hariomoiltrading.com/products"
+          href="https://www.hariomoiltrading.in/products"
         />
 
         {/* Open Graph Tags */}
         <meta
           property="og:title"
-          content="Our Premium Products | Hari Om Oil Tradings"
+          content="Engine Oils, Greases & Viscosity Improvers | Hari Om Oil Trading"
         />
         <meta
           property="og:description"
-          content="Discover high-quality engine oils, greases, and polymer additives from Hari Om Oil Tradings. We are trusted industrial traders in India."
+          content="Browse engine oils, industrial greases, lubricant polymers, and viscosity index improvers supplied from Modasa, Gujarat, across India."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.hariomoiltrading.com/products"
+          content="https://www.hariomoiltrading.in/products"
         />
         <meta
           property="og:image"
-          content="https://www.hariomoiltrading.com/about.png"
+          content="https://www.hariomoiltrading.in/about.png"
         />
         <meta property="og:site_name" content="Hari Om Oil Tradings" />
 
@@ -154,14 +146,13 @@ const Products = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.hariomoiltrading.com/about.png"
+          content="https://www.hariomoiltrading.in/about.png"
         />
 
-        {/* Structured Data (JSON-LD) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredProductData),
+            __html: JSON.stringify(productListSchema),
           }}
         />
         <script
@@ -233,6 +224,8 @@ const Products = () => {
               </label>
               <select
                 id="categoryFilter"
+                name="categoryFilter"
+                autoComplete="off"
                 value={activeFilter}
                 onChange={(e) => {
                   setActiveFilter(e.target.value);
@@ -266,6 +259,9 @@ const Products = () => {
               <div className="relative">
                 <input
                   type="text"
+                  id="productSearch"
+                  name="productSearch"
+                  autoComplete="off"
                   placeholder="Search products..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}

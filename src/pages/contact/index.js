@@ -111,7 +111,7 @@ const Contact = () => {
           content="Get in touch with Hari Om Oil Trading for support, inquiries, and business contact information."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hariomoiltrading.com/contact" />
+        <link rel="canonical" href="https://www.hariomoiltrading.in/contact" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -119,7 +119,7 @@ const Contact = () => {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Hari Om Oil Tradings",
-              image: "http://www.hariomoiltrading.com/logo.png",
+              image: "https://www.hariomoiltrading.in/logo.png",
               telephone: "+91 90166 37062",
               email: CONTACT_INFO.email,
               address: {
@@ -150,7 +150,7 @@ const Contact = () => {
                   closes: "14:00",
                 },
               ],
-              url: "https://www.hariomoiltrading.com/contact",
+              url: "https://www.hariomoiltrading.in/contact",
               sameAs: [
                 "https://www.instagram.com/hariomoiltrading",
               ],
@@ -252,6 +252,7 @@ const Contact = () => {
                   <form
                     ref={formRef}
                     onSubmit={handleSubmit}
+                    autoComplete="on"
                     className="space-y-6"
                   >
                     <div className="space-y-4">
@@ -270,6 +271,7 @@ const Contact = () => {
                             type="text"
                             id="name"
                             name="name"
+                            autoComplete="name"
                             value={formData.name}
                             onChange={handleChange}
                             required
@@ -295,6 +297,7 @@ const Contact = () => {
                               type="email"
                               id="email"
                               name="email"
+                              autoComplete="email"
                               value={formData.email}
                               onChange={handleChange}
                               required
@@ -319,6 +322,7 @@ const Contact = () => {
                               type="tel"
                               id="phone"
                               name="phone"
+                              autoComplete="tel"
                               value={formData.phone}
                               onChange={handleChange}
                               placeholder="Enter your phone number"
@@ -344,6 +348,7 @@ const Contact = () => {
                               type="text"
                               id="subject"
                               name="subject"
+                              autoComplete="off"
                               value={formData.subject}
                               onChange={handleChange}
                               placeholder="Enter subject"
@@ -367,6 +372,7 @@ const Contact = () => {
                           <textarea
                             id="message"
                             name="message"
+                            autoComplete="off"
                             value={formData.message}
                             onChange={handleChange}
                             rows={6}

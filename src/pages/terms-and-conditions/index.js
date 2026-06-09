@@ -10,7 +10,7 @@ const TermsAndConditions = () => {
     name: "Terms and Conditions - Hari Om Oil Trading",
     description:
       "Terms and conditions for industrial lubricants and polymer trading services.",
-    url: "http://www.hariomoiltrading.com/terms-and-conditions",
+    url: "https://www.hariomoiltrading.in/terms-and-conditions",
   };
 
   return (

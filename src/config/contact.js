@@ -6,7 +6,7 @@ export const CONTACT_INFO = {
   phonePlain: process.env.NEXT_PUBLIC_PHONE_CLEAN || '9016637062',
   email: process.env.NEXT_PUBLIC_EMAIL || 'hariomoiltrading@gmail.com',
   whatsappPhone: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '919016637062',
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hariomoiltradings.com',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hariomoiltrading.in',
   siteName: process.env.NEXT_PUBLIC_SITE_NAME || 'Hari Om Oil Tradings',
 };
 

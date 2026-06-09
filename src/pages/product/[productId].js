@@ -19,6 +19,7 @@ import Image from "next/image";
 import { HOME_PRODUCTS } from "@/data/products";
 import { ENGINE_OILS } from "@/data/engineOil";
 import InquryForm from "@/components/InquryForm";
+import { CONTACT_INFO } from "@/config/contact";
 
 export const generateDefaultFeatures = (product) => {
   const features = [];
@@ -27,6 +28,14 @@ export const generateDefaultFeatures = (product) => {
     features.push(`Usage: ${product.usageApplication}`);
   if (product.viscosity) features.push(`Viscosity: ${product.viscosity}`);
   return features;
+};
+
+const getPriceValues = (price) => {
+  const values = price?.match(/[\d,]+(?:\.\d+)?/g)?.map((value) =>
+    Number(value.replace(/,/g, ""))
+  );
+
+  return values?.filter(Number.isFinite) || [];
 };
 
 const ProductPage = () => {
@@ -99,7 +108,7 @@ const ProductPage = () => {
 
   const generateWhatsAppMessage = () => {
     const message = `I'm interested in the following product:\n\n*${product.name}*\n\n`;
-    const productUrl = `https://www.hariomoiltrading.com/product/${product.id}`;
+    const productUrl = `https://www.hariomoiltrading.in/product/${product.id}`;
 
     return encodeURIComponent(
       `${message}Product Details:\n${
@@ -111,7 +120,7 @@ const ProductPage = () => {
   };
 
   const generateEmailBody = () => {
-    const productUrl = `https://www.hariomoiltrading.com/product/${product.id}`;
+    const productUrl = `https://www.hariomoiltrading.in/product/${product.id}`;
     return encodeURIComponent(
       `I'm interested in the following product:\n\n` +
         `Product Name: ${product.name}\n\n` +
@@ -126,26 +135,45 @@ const ProductPage = () => {
   const metaDescription =
     product.description?.slice(0, 150) ||
     "High quality industrial and automotive products.";
+  const productUrl = `${CONTACT_INFO.siteUrl}/product/${product.id}`;
+  const absoluteImages = images.map((image) =>
+    image?.startsWith("http") ? image : `${CONTACT_INFO.siteUrl}${image}`
+  );
+  const priceValues = getPriceValues(product.price);
+  const offers =
+    priceValues.length > 1
+      ? {
+          "@type": "AggregateOffer",
+          url: productUrl,
+          priceCurrency: "INR",
+          lowPrice: Math.min(...priceValues),
+          highPrice: Math.max(...priceValues),
+          offerCount: priceValues.length,
+          availability: "https://schema.org/InStock",
+        }
+      : {
+          "@type": "Offer",
+          url: productUrl,
+          priceCurrency: "INR",
+          price: priceValues[0] || 0,
+          availability: "https://schema.org/InStock",
+          itemCondition: "https://schema.org/NewCondition",
+        };
 
   const structuredData = {
     "@context": "https://schema.org/",
     "@type": "Product",
+    "@id": `${productUrl}#product`,
     name: product.name,
-    image: images[0],
+    image: absoluteImages,
     description: product.description,
-    sku: product.id,
+    sku: product.code || product.id,
+    category: product.category,
     brand: {
       "@type": "Brand",
       name: product.brand || "Hari Om Oil Tradings",
     },
-    offers: {
-      "@type": "Offer",
-      url: `http://www.hariomoiltrading.com/product/${product.id}`,
-      priceCurrency: "INR",
-      price: product.price?.replace(/[^\d]/g, "") || "0.00",
-      availability: "https://schema.org/InStock",
-      itemCondition: "https://schema.org/NewCondition",
-    },
+    offers,
   };
 
   return (
@@ -153,20 +181,20 @@ const ProductPage = () => {
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={productUrl} />
 
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
-        <meta property="og:image" content={images[0]} />
-        <meta
-          property="og:url"
-          content={`https://www.hariomoiltrading.com/product/${product.id}`}
-        />
+        <meta property="og:image" content={absoluteImages[0]} />
+        <meta property="og:url" content={productUrl} />
         <meta property="og:type" content="product" />
+        <meta property="og:site_name" content={CONTACT_INFO.siteName} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={images[0]} />
+        <meta name="twitter:image" content={absoluteImages[0]} />
 
         <script
           type="application/ld+json"

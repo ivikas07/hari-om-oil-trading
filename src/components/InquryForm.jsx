@@ -101,7 +101,12 @@ const InquryForm = ({ onClose, productName, category }) => {
           </button>
         </div>
       ) : (
-        <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          autoComplete="on"
+          className="space-y-6"
+        >
           <div className="space-y-4">
             <div>
               <label
@@ -114,6 +119,7 @@ const InquryForm = ({ onClose, productName, category }) => {
                 type="text"
                 id="name"
                 name="name"
+                autoComplete="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -133,6 +139,7 @@ const InquryForm = ({ onClose, productName, category }) => {
                 type="tel"
                 id="phone"
                 name="phone"
+                autoComplete="tel"
                 value={formData.phone}
                 onChange={handleChange}
                 required
@@ -152,6 +159,7 @@ const InquryForm = ({ onClose, productName, category }) => {
                 type="email"
                 id="email"
                 name="email"
+                autoComplete="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -171,6 +179,7 @@ const InquryForm = ({ onClose, productName, category }) => {
                 type="text"
                 id="product"
                 name="product"
+                autoComplete="off"
                 value={formData.product}
                 onChange={handleChange}
                 placeholder="Enter product (if any)"
@@ -188,6 +197,7 @@ const InquryForm = ({ onClose, productName, category }) => {
               <select
                 id="category"
                 name="category"
+                autoComplete="off"
                 value={formData.category}
                 onChange={handleChange}
                 required
@@ -197,6 +207,9 @@ const InquryForm = ({ onClose, productName, category }) => {
                 <option value="Polymer">Polymer</option>
                 <option value="Engine Oil">Engine Oil</option>
                 <option value="Grease">Grease</option>
+                <option value="Viscosity Index Improver">
+                  Viscosity Index Improver
+                </option>
               </select>
             </div>
 
@@ -210,6 +223,7 @@ const InquryForm = ({ onClose, productName, category }) => {
               <textarea
                 id="message"
                 name="message"
+                autoComplete="off"
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}

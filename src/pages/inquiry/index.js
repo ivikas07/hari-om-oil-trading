@@ -124,7 +124,7 @@ const Inquiry = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.hariomoiltradings.com/inquiry"
+          content="https://www.hariomoiltrading.in/inquiry"
         />
         <meta property="og:site_name" content="Hari Om Oil Tradings" />
       </Head>
@@ -226,6 +226,7 @@ const Inquiry = () => {
                   <form
                     ref={formRef}
                     onSubmit={handleSubmit}
+                    autoComplete="on"
                     className="space-y-6"
                   >
                     <div className="space-y-4">
@@ -241,6 +242,7 @@ const Inquiry = () => {
                             type="text"
                             id="name"
                             name="name"
+                            autoComplete="name"
                             value={formData.name}
                             onChange={handleChange}
                             required
@@ -263,6 +265,7 @@ const Inquiry = () => {
                               type="email"
                               id="email"
                               name="email"
+                              autoComplete="email"
                               value={formData.email}
                               onChange={handleChange}
                               required
@@ -284,6 +287,7 @@ const Inquiry = () => {
                               type="tel"
                               id="phone"
                               name="phone"
+                              autoComplete="tel"
                               value={formData.phone}
                               onChange={handleChange}
                               required
@@ -305,6 +309,7 @@ const Inquiry = () => {
                           <select
                             id="product"
                             name="product"
+                            autoComplete="off"
                             value={formData.product}
                             onChange={handleChange}
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none text-[var(--color-text)] appearance-none bg-white"
@@ -342,6 +347,7 @@ const Inquiry = () => {
                           <textarea
                             id="message"
                             name="message"
+                            autoComplete="off"
                             value={formData.message}
                             onChange={handleChange}
                             rows={6}

@@ -63,6 +63,12 @@ const products = [
     image:
       "https://res.cloudinary.com/dnwhvplae/image/upload/v1751205252/Grease_Logo_htnvmm.webp",
   },
+  {
+    id: 4,
+    name: "Viscosity Index Improver",
+    description: "High-performance additives for stable lubricant viscosity",
+    image: "/products/viscosity-index-improver-category.webp",
+  },
 ];
 
 const Home = () => {
@@ -120,7 +126,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Head>
-        <link rel="canonical" href="https://www.hariomoiltrading.com/" />
+        <link rel="canonical" href="https://www.hariomoiltrading.in/" />
         <title>
           Hari Om Oil Tradings | Trusted Trader of Engine Oils, Greases &
           Industrial Polymers Across India
@@ -149,9 +155,9 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="http://www.hariomoiltrading.com/about.png"
+          content="https://www.hariomoiltrading.in/about.png"
         />
-        <meta property="og:url" content="http://www.hariomoiltrading.com" />
+        <meta property="og:url" content="https://www.hariomoiltrading.in" />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card */}
@@ -166,7 +172,7 @@ const Home = () => {
         />
         <meta
           name="twitter:image"
-          content="http://www.hariomoiltrading.com/about.png"
+          content="https://www.hariomoiltrading.in/about.png"
         />
         <meta name="twitter:site" content="@imkuldeep2804" />
 
@@ -178,8 +184,8 @@ const Home = () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Hari Om Oil Tradings",
-              url: "http://www.hariomoiltrading.com/",
-              logo: "http://www.hariomoiltrading.com/logo.png",
+              url: "https://www.hariomoiltrading.in/",
+              logo: "https://www.hariomoiltrading.in/logo.png",
               description:
                 "Hari Om Oil Trading is a leading trader and supplier of industrial lubricants and engine oils. We deliver high-quality products with reliable pan-India service, trusted by industries across the country.",
               contactPoint: {
@@ -327,7 +333,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-5">
             {products.map((product) => (
               <div
                 key={product.id}
