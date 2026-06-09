@@ -210,6 +210,7 @@ const InquryForm = ({ onClose, productName, category }) => {
                 <option value="Viscosity Index Improver">
                   Viscosity Index Improver
                 </option>
+                <option value="Perfume Additive">Perfume Additive</option>
               </select>
             </div>
 

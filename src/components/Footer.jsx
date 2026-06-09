@@ -112,9 +112,9 @@ const Footer = () => {
           <p className="text-gray-400 text-xs">
             © 2025{" "}
             <span className="text-white font-medium">Hari Om Oil Tradings</span>
-            . All rights reserved. | Built by{" "}
+            . All rights reserved. | Built with{" "}
             <Link
-              href={"https://flownware.vercel.app/"}
+              href="/"
               className="text-accent font-semibold"
             >
               {" "}

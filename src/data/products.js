@@ -154,6 +154,22 @@ export const HOME_PRODUCTS = [
     endpoint: "viscosity-index-improver-yellow",
   },
 
+  {
+    name: "Engine Oil Perfume Additive",
+    code: "PERFUME-ADDITIVE",
+    category: "Perfume Additive",
+    description:
+      "Engine oil perfumes are highly concentrated, oil-soluble aroma additives designed to mask harsh chemical odors without altering the viscosity or lubrication performance of the base oil.",
+    price: "₹800 + GST",
+    brand: "Hari Om Oil Tradings",
+    usageApplication: "Fragrance additive for engine oils and lubricants",
+    appearance: "Clear",
+    form: "Liquid",
+    specs:
+      "Engine oil perfumes are highly concentrated, oil-soluble aroma additives designed to mask harsh chemical odors without altering the viscosity or lubrication performance of the base oil",
+    images: ["/products/engine-oil-perfume-additive.jpeg"],
+    endpoint: "engine-oil-perfume-additive",
+  },
 
 
 
