@@ -40,7 +40,10 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50" >
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
         <div className="flex justify-between items-center  h-16">
-          <Link href="/" className="flex items-center gap-2">
+          <Link
+            href="/"
+            className="flex items-center gap-2 transition-transform duration-200 hover:scale-[1.03]"
+          >
             <Image
               src={logo}
               alt="Hari Om Oil Trading"
@@ -54,7 +57,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-md font-medium transition duration-300 ${
+                className={`text-md font-medium transition-all duration-300 hover:-translate-y-0.5 ${
                   isActive(item.href)
                     ? 'text-[#FF914D] border-b-2 border-[#FF914D]'
                     : 'text-gray-700 hover:text-[#FF914D]'
@@ -68,7 +71,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-[#FF914D] focus:outline-none"
+              className="rounded-md p-1 text-gray-700 transition-all hover:scale-105 hover:bg-orange-50 hover:text-[#FF914D] focus:outline-none"
               aria-label="Toggle Menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -98,7 +101,7 @@ const Navbar = () => {
             <button
               onClick={closeMenu}
               aria-label="Close Menu"
-              className="text-gray-600 hover:text-[#FF914D] focus:outline-none"
+              className="rounded-md p-1 text-gray-600 transition-all hover:rotate-90 hover:bg-orange-50 hover:text-[#FF914D] focus:outline-none"
             >
               <X className="w-6 h-6" />
             </button>
@@ -109,7 +112,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`block px-4 py-3 rounded-lg font-medium text-lg transition ${
+                className={`block px-4 py-3 rounded-lg font-medium text-lg transition-all hover:translate-x-1 ${
                   isActive(item.href)
                     ? 'bg-[#FF914D]/10 text-[#FF914D] shadow-md'
                     : 'text-gray-800 hover:text-[#FF914D] hover:bg-gray-100'

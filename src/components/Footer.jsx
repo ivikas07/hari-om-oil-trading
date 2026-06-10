@@ -74,7 +74,7 @@ const Footer = () => {
                   <li key={i}>
                     <Link
                       href={href}
-                      className="text-gray-300 hover:text-white hover:underline transition"
+                      className="inline-block text-gray-300 transition-all hover:translate-x-1 hover:text-white hover:underline"
                     >
                       {name}
                     </Link>
@@ -96,7 +96,7 @@ const Footer = () => {
                   <li key={product.id}>
                     <Link
                       href={`/product/${product.endpoint}`}
-                      className="hover:text-white transition"
+                      className="inline-block transition-all hover:translate-x-1 hover:text-white"
                     >
                       {product.name}
                     </Link>
@@ -115,7 +115,7 @@ const Footer = () => {
             . All rights reserved. | Built with{" "}
             <Link
               href="/"
-              className="text-accent font-semibold"
+              className="inline-block rounded px-1 text-accent font-semibold transition-all hover:-translate-y-0.5 hover:text-orange-300 hover:underline"
             >
               {" "}
               DigitalTeam

@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Head from "next/head";
 import ErrorBoundary from "@/components/ErrorBoundary";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { CONTACT_INFO } from "@/config/contact";
 
 export default function App({ Component, pageProps }) {
@@ -102,6 +103,7 @@ export default function App({ Component, pageProps }) {
       <ErrorBoundary>
         <Component {...pageProps} />
       </ErrorBoundary>
+      <WhatsAppButton />
     </>
   );
 }

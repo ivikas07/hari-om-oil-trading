@@ -343,14 +343,14 @@ const Home = () => {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="bg-white shadow-xl rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                className="ui-card group overflow-hidden rounded-2xl border border-transparent bg-white shadow-xl"
               >
                 {/* Image block */}
                 <div className="bg-blue-100">
                   <Image
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-52 object-cover"
+                    className="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     width={400}
                     height={300}
                     priority
@@ -370,10 +370,10 @@ const Home = () => {
                       pathname: "/products",
                       query: { category: product.name },
                     }}
-                    className="inline-flex items-center font-medium text-[#FF914D] hover:text-orange-600 transition-colors group"
+                    className="ui-button inline-flex items-center rounded-md px-2 py-1 font-medium text-[#FF914D] transition-colors hover:bg-orange-50 hover:text-orange-600"
                   >
                     View Category
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
               </div>
