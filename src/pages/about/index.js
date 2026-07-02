@@ -93,7 +93,7 @@ const About = () => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Hari Om Oil Tradings",
+              name: "Hari Om Oil Trading",
               url: "https://www.hariomoiltrading.in/",
               logo: "https://www.hariomoiltrading.in/logo.png",
               description:

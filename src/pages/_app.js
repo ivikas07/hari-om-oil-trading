@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${CONTACT_INFO.siteUrl}/#business`,
     name: GOOGLE_SITE_NAME,
-    alternateName: ["Hari Om Oil Tradings", "Hariomoil Trading"],
+    alternateName: ["Hari Om Oil Trading", "Hariomoil Trading"],
     url: CONTACT_INFO.siteUrl,
     logo: `${CONTACT_INFO.siteUrl}/logo.png`,
     image: `${CONTACT_INFO.siteUrl}/about.png`,
@@ -72,7 +72,7 @@ export default function App({ Component, pageProps }) {
     "@type": "WebSite",
     "@id": `${CONTACT_INFO.siteUrl}/#website`,
     name: GOOGLE_SITE_NAME,
-    alternateName: ["Hari Om Oil Tradings", "Hariomoil Trading"],
+    alternateName: ["Hari Om Oil Trading", "Hariomoil Trading"],
     url: `${CONTACT_INFO.siteUrl}/`,
     publisher: {
       "@id": `${CONTACT_INFO.siteUrl}/#business`,

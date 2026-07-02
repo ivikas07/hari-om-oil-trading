@@ -100,33 +100,33 @@ const Inquiry = () => {
     <>
       <Head>
         <title>
-          Request a Quote | Hari Om Oil Tradings - Engine Oils, Greases &
+          Request a Quote | Hari Om Oil Trading - Engine Oils, Greases &
           Polymers
         </title>
         <meta
           name="description"
-          content="Request a competitive quote from Hari Om Oil Tradings, trusted Indian trader of engine oils, industrial greases, and polymer products. Fast response and nationwide service."
+          content="Request a competitive quote from Hari Om Oil Trading, trusted Indian trader of engine oils, industrial greases, and polymer products. Fast response and nationwide service."
         />
         <meta
           name="keywords"
-          content="request quote, oil quote, engine oil supplier, grease trader, polymer trader, industrial lubricants India, Hari Om Oil Tradings"
+          content="request quote, oil quote, engine oil supplier, grease trader, polymer trader, industrial lubricants India, Hari Om Oil Trading"
         />
-        <meta name="author" content="Hari Om Oil Tradings" />
+        <meta name="author" content="Hari Om Oil Trading" />
         <meta name="robots" content="index, follow" />
         <meta
           property="og:title"
-          content="Request a Quote | Hari Om Oil Tradings"
+          content="Request a Quote | Hari Om Oil Trading"
         />
         <meta
           property="og:description"
-          content="Contact Hari Om Oil Tradings to get pricing and supply details for premium engine oils, greases, and polymers. Serving industries across India."
+          content="Contact Hari Om Oil Trading to get pricing and supply details for premium engine oils, greases, and polymers. Serving industries across India."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content="https://www.hariomoiltrading.in/inquiry"
         />
-        <meta property="og:site_name" content="Hari Om Oil Tradings" />
+        <meta property="og:site_name" content="Hari Om Oil Trading" />
       </Head>
 
       <Navbar />

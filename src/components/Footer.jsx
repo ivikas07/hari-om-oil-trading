@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-4">
               <span className="text-2xl font-bold tracking-wide">
-                Hari Om Oil Tradings
+                Hari Om Oil Trading
               </span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
@@ -111,7 +111,7 @@ const Footer = () => {
         <div className="border-t border-gray-600 mt-10 pt-6 text-center">
           <p className="text-gray-400 text-xs">
             © 2025{" "}
-            <span className="text-white font-medium">Hari Om Oil Tradings</span>
+            <span className="text-white font-medium">Hari Om Oil Trading</span>
             . All rights reserved. | Built with{" "}
             <Link
               href="/"

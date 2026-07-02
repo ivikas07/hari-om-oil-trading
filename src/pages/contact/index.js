@@ -118,7 +118,7 @@ const Contact = () => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Hari Om Oil Tradings",
+              name: "Hari Om Oil Trading",
               image: "https://www.hariomoiltrading.in/logo.png",
               telephone: "+91 90166 37062",
               email: CONTACT_INFO.email,
@@ -596,7 +596,7 @@ const Contact = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Hari Om Oil Tradings"
+                  title="Hari Om Oil Trading"
                 ></iframe>
               </div>
               <div className="p-8">

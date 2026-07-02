@@ -190,7 +190,7 @@ const Home = () => {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Hari Om Oil Trading",
-              alternateName: ["Hari Om Oil Tradings", "Hariomoil Trading"],
+              alternateName: ["Hari Om Oil Trading", "Hariomoil Trading"],
               url: "https://www.hariomoiltrading.in/",
               logo: "https://www.hariomoiltrading.in/logo.png",
               description:

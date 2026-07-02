@@ -131,7 +131,7 @@ const ProductPage = () => {
     );
   };
 
-  const metaTitle = `${product.name} | Hari Om Oil Tradings`;
+  const metaTitle = `${product.name} | Hari Om Oil Trading`;
   const metaDescription =
     product.description?.slice(0, 150) ||
     "High quality industrial and automotive products.";
@@ -171,7 +171,7 @@ const ProductPage = () => {
     category: product.category,
     brand: {
       "@type": "Brand",
-      name: product.brand || "Hari Om Oil Tradings",
+      name: product.brand || "Hari Om Oil Trading",
     },
     offers,
   };

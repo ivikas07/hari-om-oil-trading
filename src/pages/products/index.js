@@ -132,17 +132,17 @@ const Products = () => {
           property="og:image"
           content="https://www.hariomoiltrading.in/about.png"
         />
-        <meta property="og:site_name" content="Hari Om Oil Tradings" />
+        <meta property="og:site_name" content="Hari Om Oil Trading" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Our Premium Products | Hari Om Oil Tradings"
+          content="Our Premium Products | Hari Om Oil Trading"
         />
         <meta
           name="twitter:description"
-          content="Explore premium engine oils, industrial greases, and polymer additives from trusted Indian traders Hari Om Oil Tradings."
+          content="Explore premium engine oils, industrial greases, and polymer additives from trusted Indian traders Hari Om Oil Trading."
         />
         <meta
           name="twitter:image"
