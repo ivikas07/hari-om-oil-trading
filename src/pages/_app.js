@@ -91,7 +91,7 @@ export default function App({ Component, pageProps }) {
           sizes="96x96"
           href="/favicon-96x96.png"
         />
-        <link rel="shortcut icon" href="/favicon-96x96.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="icon"
           type="image/png"
