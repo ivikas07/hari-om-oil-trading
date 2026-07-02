@@ -7,7 +7,7 @@ export const CONTACT_INFO = {
   email: process.env.NEXT_PUBLIC_EMAIL || 'hariomoiltrading@gmail.com',
   whatsappPhone: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '919016637062',
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.hariomoiltrading.in',
-  siteName: process.env.NEXT_PUBLIC_SITE_NAME || 'Hari Om Oil Tradings',
+  siteName: process.env.NEXT_PUBLIC_SITE_NAME || 'Hariomoil Trading',
 };
 
 export const EMAILJS_CONFIG = {

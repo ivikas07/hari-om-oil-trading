@@ -4,12 +4,15 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { CONTACT_INFO } from "@/config/contact";
 
+const GOOGLE_SITE_NAME = "Hariomoil Trading";
+
 export default function App({ Component, pageProps }) {
   const schemaOrg = {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
     "@id": `${CONTACT_INFO.siteUrl}/#business`,
-    name: CONTACT_INFO.siteName,
+    name: GOOGLE_SITE_NAME,
+    alternateName: ["Hari Om Oil Trading", "Hari Om Oil Tradings"],
     url: CONTACT_INFO.siteUrl,
     logo: `${CONTACT_INFO.siteUrl}/logo.png`,
     image: `${CONTACT_INFO.siteUrl}/about.png`,
@@ -64,6 +67,18 @@ export default function App({ Component, pageProps }) {
     ],
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${CONTACT_INFO.siteUrl}/#website`,
+    name: GOOGLE_SITE_NAME,
+    alternateName: ["Hari Om Oil Trading", "Hari Om Oil Tradings"],
+    url: `${CONTACT_INFO.siteUrl}/`,
+    publisher: {
+      "@id": `${CONTACT_INFO.siteUrl}/#business`,
+    },
+  };
+
   return (
     <>
       <Head>
@@ -98,6 +113,11 @@ export default function App({ Component, pageProps }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
           key="schema-org"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+          key="website-schema"
         />
       </Head>
       <ErrorBoundary>
