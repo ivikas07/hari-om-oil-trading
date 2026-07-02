@@ -70,13 +70,13 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
 
-        <link rel="icon" href="/favicon.ico" />
         <link
           rel="icon"
           type="image/png"
           sizes="96x96"
           href="/favicon-96x96.png"
         />
+        <link rel="shortcut icon" href="/favicon-96x96.png" />
         <link
           rel="icon"
           type="image/png"
