@@ -134,7 +134,7 @@ const Home = () => {
       <Head>
         <link rel="canonical" href="https://www.hariomoiltrading.in/" />
         <title>
-          Hariomoil Trading | Trusted Trader of Engine Oils, Greases &
+          Hari Om Oil Trading | Trusted Trader of Engine Oils, Greases &
           Industrial Polymers Across India
         </title>
         <meta
@@ -146,14 +146,14 @@ const Home = () => {
           content="industrial lubricants, engine oils, greases, additive polymers, packaging materials, oil supplier, Gujarat lubricant company"
         />
 
-        <meta name="author" content="Hariomoil Trading" />
+        <meta name="author" content="Hari Om Oil Trading" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
 
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="Hariomoil Trading | Your Lubricant Trading Partner"
+          content="Hari Om Oil Trading | Your Lubricant Trading Partner"
         />
         <meta
           property="og:description"
@@ -170,7 +170,7 @@ const Home = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Hariomoil Trading | Trusted Trader of Engine Oils, Greases & Industrial Polymers Across India"
+          content="Hari Om Oil Trading | Trusted Trader of Engine Oils, Greases & Industrial Polymers Across India"
         />
         <meta
           name="twitter:description"
@@ -189,8 +189,8 @@ const Home = () => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Hariomoil Trading",
-              alternateName: ["Hari Om Oil Trading", "Hari Om Oil Tradings"],
+              name: "Hari Om Oil Trading",
+              alternateName: ["Hari Om Oil Tradings", "Hariomoil Trading"],
               url: "https://www.hariomoiltrading.in/",
               logo: "https://www.hariomoiltrading.in/logo.png",
               description:
